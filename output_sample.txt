@@ -16,7 +16,7 @@
                         'anger': 0.438178, 'disgust': 0.03310823,
                         'fear': 0.18359585, 'joy': 0.016880915,
                         'sadness': 0.1679198}}]}], 
-                    'producerId': {'name': 'Ensemble Aggregated Emotion Workflow', 'version': '0.0.1'}}
+    'producerId': {'name': 'Ensemble Aggregated Emotion Workflow', 'version': '0.0.1'}}
 
 [EXPECTED OUTPUT]
 {
