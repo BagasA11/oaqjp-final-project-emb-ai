@@ -3,7 +3,7 @@ from EmotionDetection.emotion_detection import emotion_detector
 
 app=Flask()
 
-@app.get('/')
+@app.route('/')
 def detect_emotion():
     input=requests.args.get('input')
     output=emotion_detector(input)
@@ -16,3 +16,6 @@ def detect_emotion():
     response_txt+=f"The dominant emotion is <b>{dominant}</b>"
     # 'anger': 0.006274985, 'disgust': 0.0025598293, 'fear': 0.009251528, 'joy': 0.9680386 and 'sadness': 0.049744144. The dominant emotion is joy."
     return response_txt
+
+if __name__ == "__main__":
+    app.run(debug=True)
