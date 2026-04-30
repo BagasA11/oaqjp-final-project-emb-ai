@@ -1,0 +1,5 @@
+>>> from emotion_detection import emotion_detector, EXAMPLE
+>>> EXAMPLE
+'Pentingnya PENDIDIKAN! Daripada jadi DUNGU macam supir² yg menghadang'
+>>> print(emotion_detector(EXAMPLE))
+{'anger': 0.06869387, 'disgust': 0.021487607, 'fear': 0.26795462, 'joy': 0.42237782, 'sadness': 0.10961002, 'dominant_emotion': 'joy'}
