@@ -1,0 +1,29 @@
+[RESPONSE OUTPUT]
+{
+    'emotionPredictions': [{
+        'emotion': {
+            'anger': 0.438178, 
+            'disgust': 0.03310823, 
+            'fear': 0.18359585,
+            'joy': 0.016880915,
+            'sadness': 0.1679198},
+            'target': '', 
+            'emotionMentions': [{
+                'span': {
+                    'begin': 0, 'end': 24, 
+                    'text': 'axi for real Problematic'}, 
+                    'emotion': {
+                        'anger': 0.438178, 'disgust': 0.03310823,
+                        'fear': 0.18359585, 'joy': 0.016880915,
+                        'sadness': 0.1679198}}]}], 
+                    'producerId': {'name': 'Ensemble Aggregated Emotion Workflow', 'version': '0.0.1'}}
+
+[EXPECTED OUTPUT]
+{
+'anger': anger_score,
+'disgust': disgust_score,
+'fear': fear_score,
+'joy': joy_score,
+'sadness': sadness_score,
+'dominant_emotion': '<name of the dominant emotion>'
+}
