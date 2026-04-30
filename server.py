@@ -6,9 +6,9 @@ app=Flask(__name__)
 @app.route('/')
 def detect_emotion():
     input=request.args.get('input')
-    if input == '':
-        input='I love my life'
     output=emotion_detector(input)
+    if output is None:
+        return ('input argument required', 400)
     response_txt="For the given statement, the system response is "
     dominant=output['dominant_emotion']
     del output['dominant_emotion']
