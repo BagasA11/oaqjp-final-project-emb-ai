@@ -1,11 +1,11 @@
-from flask import Flask, request, make_response
+from flask import Flask, requests, make_response
 from EmotionDetection.emotion_detection import emotion_detector
 
-app=Flask(__name__)
+app=Flask()
 
 @app.route('/')
 def detect_emotion():
-    input=request.args.get('input')
+    input=requests.args.get('input')
     output=emotion_detector(input)
     response_txt="For the given statement, the system response is "
     dominant=output['dominant_emotion']
