@@ -6,6 +6,8 @@ app=Flask(__name__)
 @app.route('/')
 def detect_emotion():
     input=request.args.get('input')
+    if input == '':
+        return "expected \'input\' argument in url", 400
     output=emotion_detector(input)
     response_txt="For the given statement, the system response is "
     dominant=output['dominant_emotion']
