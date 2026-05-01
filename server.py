@@ -1,3 +1,4 @@
+"""This module are server entrypoint """
 from flask import Flask, request, render_template
 from EmotionDetection.emotion_detection import emotion_detector
 
@@ -20,12 +21,12 @@ def homepage():
 
 @app.route('/emotionDetector')
 def detect_emotion():
-    input=request.args.get('textToAnalyze')
-    output=emotion_detector(input)
+    """handle request then return list of emotion in string format"""
+    payload=request.args.get('textToAnalyze')
+    output=emotion_detector(payload)
     if output is None:
         return ""
     return __format_output(output)
     
-
 if __name__ == "__main__":
     app.run(debug=True)
